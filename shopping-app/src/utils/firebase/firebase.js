@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app';
 import {getAuth, signInWithRirect, signInWithPopup,GoogleAuthProvider} from 'firebase/auth';
-
+//--------------------initialize app----------------------
 const firebaseConfig = {
     apiKey: "AIzaSyAeKeAU2EwPpHT-xL3b2jDdGwKfeVeqaN4",
     authDomain: "crown-clothing-db-804c8.firebaseapp.com",
@@ -10,8 +10,9 @@ const firebaseConfig = {
     appId: "1:864123458674:web:b8fe78b3c8f3a8bec85eeb"
   };
   
-  // Initialize Firebase
+  
   const firebaseApp = initializeApp(firebaseConfig);
+//----------------------------------------------------------
 
   const provider = new GoogleAuthProvider();
 
