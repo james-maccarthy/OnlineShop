@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import {getAuth, signInWithRirect, signInWithPopup,GoogleAuthProvider} from 'firebase/auth';
+import {getAuth, signInWithPopup,GoogleAuthProvider, createUserWithEmailAndPassword} from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc} from 'firebase/firestore';
 //--------------------initialize app----------------------
 const firebaseConfig = {
@@ -25,6 +25,7 @@ const firebaseConfig = {
 
   export const auth = getAuth();
   export const signInWithGooglePopUp = () => signInWithPopup(auth, provider);
+  
 //------------------------------------------------------------
 
 // create connection to firestore database
@@ -57,3 +58,6 @@ export const createUserDocumentFromAuth = async (userAuth) => {
     }
     return userDocRef;
 };
+
+
+
